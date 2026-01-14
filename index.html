@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Excellence in Education - Leading University providing world-class education and research opportunities">
+    <title>Excellence University - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="Excellence University Logo" class="logo-img">
+                <span class="logo-text">Excellence University</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#campus" class="nav-link">Campus Life</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#apply" class="btn btn-primary">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Shape Your Future</h1>
+            <p class="hero-subtitle fade-in-delay">Join a community of innovators, thinkers, and leaders at Excellence University</p>
+            <div class="hero-buttons fade-in-delay-2">
+                <a href="#programs" class="btn btn-large btn-primary">Explore Programs</a>
+                <a href="#about" class="btn btn-large btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="15000">0</h3>
+                    <p class="stat-label">Students</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="850">0</h3>
+                    <p class="stat-label">Faculty Members</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="120">0</h3>
+                    <p class="stat-label">Programs</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="95">0</h3>
+                    <p class="stat-label">Countries Represented</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who We Are</span>
+                <h2 class="section-title">About Excellence University</h2>
+                <p class="section-description">A legacy of academic excellence and innovation since 1875</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Excellence University is a globally recognized institution committed to transforming lives through education, research, and innovation. For over 145 years, we have been at the forefront of academic excellence, preparing students to become leaders in their fields.</p>
+                    
+                    <p>Our diverse community of scholars, researchers, and students from around the world creates a vibrant learning environment where ideas flourish and discoveries are made daily.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎓</div>
+                            <div class="feature-content">
+                                <h4>World-Class Education</h4>
+                                <p>Rigorous academic programs taught by renowned faculty</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔬</div>
+                            <div class="feature-content">
+                                <h4>Cutting-Edge Research</h4>
+                                <p>Leading research initiatives across multiple disciplines</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <div class="feature-content">
+                                <h4>Global Perspective</h4>
+                                <p>International partnerships and study abroad opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="assets/campus-main.jpg" alt="University Campus" class="rounded-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Academic Programs</h2>
+                <p class="section-description">Discover world-class programs designed to unlock your potential</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">💻</div>
+                    <h3>Computer Science</h3>
+                    <p>Master the latest technologies and prepare for the digital future with our comprehensive CS programs.</p>
+                    <a href="#" class="program-link">Learn More →</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">⚖️</div>
+                    <h3>Business & Law</h3>
+                    <p>Develop strategic thinking and leadership skills in our top-ranked business and law schools.</p>
+                    <a href="#" class="program-link">Learn More →</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">🧬</div>
+                    <h3>Life Sciences</h3>
+                    <p>Explore biology, chemistry, and medicine through hands-on research and innovative coursework.</p>
+                    <a href="#" class="program-link">Learn More →</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">🎨</div>
+                    <h3>Arts & Humanities</h3>
+                    <p>Cultivate creativity and critical thinking through literature, history, philosophy, and the arts.</p>
+                    <a href="#" class="program-link">Learn More →</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">⚙️</div>
+                    <h3>Engineering</h3>
+                    <p>Design solutions to real-world challenges with our state-of-the-art engineering programs.</p>
+                    <a href="#" class="program-link">Learn More →</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">🧠</div>
+                    <h3>Social Sciences</h3>
+                    <p>Understand human behavior and society through psychology, sociology, and political science.</p>
+                    <a href="#" class="program-link">Learn More →</a>
+                </div>
+            </div>
+            
+            <div class="programs-cta">
+                <a href="#" class="btn btn-primary">View All Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research-section" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Innovation & Discovery</span>
+                <h2 class="section-title">Research Excellence</h2>
+                <p class="section-description">Pushing the boundaries of knowledge and making an impact</p>
+            </div>
+            
+            <div class="research-content">
+                <div class="research-highlights">
+                    <div class="research-card">
+                        <img src="assets/research-1.jpg" alt="AI Research Lab" class="research-img">
+                        <div class="research-info">
+                            <span class="research-category">Artificial Intelligence</span>
+                            <h3>Next-Generation AI Systems</h3>
+                            <p>Our researchers are developing advanced machine learning algorithms that are transforming healthcare diagnostics.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <img src="assets/research-2.jpg" alt="Climate Research" class="research-img">
+                        <div class="research-info">
+                            <span class="research-category">Climate Science</span>
+                            <h3>Sustainable Energy Solutions</h3>
+                            <p>Leading groundbreaking research in renewable energy and climate change mitigation strategies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <img src="assets/research-3.jpg" alt="Medical Research" class="research-img">
+                        <div class="research-info">
+                            <span class="research-category">Medical Innovation</span>
+                            <h3>Breakthrough Cancer Therapies</h3>
+                            <p>Pioneering new approaches to cancer treatment through cutting-edge biomedical research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section class="campus-section" id="campus">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Student Experience</span>
+                <h2 class="section-title">Campus Life</h2>
+                <p class="section-description">A vibrant community where you belong</p>
+            </div>
+            
+            <div class="campus-grid">
+                <div class="campus-card">
+                    <img src="assets/campus-1.jpg" alt="Student Activities" class="campus-img">
+                    <div class="campus-overlay">
+                        <h3>Student Organizations</h3>
+                        <p>Over 300 clubs and organizations to explore your passions</p>
+                    </div>
+                </div>
+                
+                <div class="campus-card">
+                    <img src="assets/campus-2.jpg" alt="Sports Facilities" class="campus-img">
+                    <div class="campus-overlay">
+                        <h3>Athletics & Recreation</h3>
+                        <p>State-of-the-art facilities and competitive sports teams</p>
+                    </div>
+                </div>
+                
+                <div class="campus-card">
+                    <img src="assets/campus-3.jpg" alt="Library" class="campus-img">
+                    <div class="campus-overlay">
+                        <h3>Modern Facilities</h3>
+                        <p>World-class libraries, labs, and learning spaces</p>
+                    </div>
+                </div>
+                
+                <div class="campus-card">
+                    <img src="assets/campus-4.jpg" alt="Student Housing" class="campus-img">
+                    <div class="campus-overlay">
+                        <h3>Campus Housing</h3>
+                        <p>Comfortable residences that feel like home</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Student Voices</span>
+                <h2 class="section-title">What Our Students Say</h2>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"Excellence University provided me with opportunities I never imagined. The faculty's dedication and the collaborative environment helped me grow both academically and personally."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/student-1.jpg" alt="Student" class="author-img">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Computer Science, Class of 2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The research opportunities here are unparalleled. I've worked on cutting-edge projects alongside world-renowned professors, preparing me for a successful career in biotechnology."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/student-2.jpg" alt="Student" class="author-img">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Biomedical Engineering, Class of 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The diverse community and global perspective I gained at Excellence University have been invaluable. I've made lifelong friends from around the world and developed skills that go beyond the classroom."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/student-3.jpg" alt="Student" class="author-img">
+                        <div class="author-info">
+                            <h4>Aisha Patel</h4>
+                            <p>International Relations, Class of 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" aria-label="Previous testimonial">←</button>
+                <div class="carousel-dots"></div>
+                <button class="carousel-btn next" aria-label="Next testimonial">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">We're here to help you with your questions</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 University Avenue<br>Campus City, ST 12345<br>United States</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>Mon-Fri: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@excellenceuniversity.edu<br>admissions@excellenceuniversity.edu</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="programs">Program Information</option>
+                            <option value="financial">Financial Aid</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="Excellence University Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Excellence University</span>
+                    </div>
+                    <p class="footer-description">Empowering minds, transforming futures. Join us in our mission to create the leaders of tomorrow.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">📹</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Academic Programs</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#campus">Campus Life</a></li>
+                        <li><a href="#apply">Admissions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty & Staff</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">Alumni Network</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Financial Aid</a></li>
+                        <li><a href="#">IT Services</a></li>
+                        <li><a href="#">Campus Safety</a></li>
+                        <li><a href="#">Health Services</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Excellence University. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

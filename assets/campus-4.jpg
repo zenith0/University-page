@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="dormBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3E5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E1BEE7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#dormBg)"/>
+  
+  <!-- Ground -->
+  <rect y="400" width="800" height="200" fill="#A5D6A7"/>
+  
+  <!-- Dormitory building -->
+  <rect x="200" y="150" width="400" height="250" fill="#EF5350"/>
+  
+  <!-- Windows grid -->
+  <rect x="230" y="180" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="300" y="180" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="370" y="180" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="440" y="180" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="510" y="180" width="50" height="50" fill="#FFF9C4"/>
+  
+  <rect x="230" y="250" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="300" y="250" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="370" y="250" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="440" y="250" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="510" y="250" width="50" height="50" fill="#FFF9C4"/>
+  
+  <rect x="230" y="320" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="300" y="320" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="440" y="320" width="50" height="50" fill="#FFF9C4"/>
+  <rect x="510" y="320" width="50" height="50" fill="#FFF9C4"/>
+  
+  <!-- Entrance door -->
+  <rect x="360" y="320" width="80" height="80" fill="#5D4037"/>
+  <circle cx="420" cy="360" r="5" fill="#FFC107"/>
+  
+  <!-- Roof -->
+  <polygon points="200,150 400,80 600,150" fill="#C62828"/>
+  
+  <!-- Sign "Residence Hall" -->
+  <rect x="300" y="120" width="200" height="40" fill="#FFFFFF" stroke="#424242" stroke-width="2"/>
+  <text x="340" y="145" font-family="Arial" font-size="18" font-weight="bold" fill="#424242">RESIDENCE HALL</text>
+  
+  <!-- Trees -->
+  <rect x="100" y="350" width="25" height="50" fill="#6D4C41"/>
+  <circle cx="112" cy="340" r="35" fill="#66BB6A"/>
+  
+  <rect x="675" y="350" width="25" height="50" fill="#6D4C41"/>
+  <circle cx="687" cy="340" r="35" fill="#66BB6A"/>
+  
+  <!-- Pathway -->
+  <polygon points="350,400 450,400 480,600 320,600" fill="#9E9E9E"/>
+  
+  <!-- Benches -->
+  <rect x="120" y="420" width="60" height="10" fill="#8D6E63"/>
+  <rect x="125" y="430" width="10" height="20" fill="#6D4C41"/>
+  <rect x="165" y="430" width="10" height="20" fill="#6D4C41"/>
+  
+  <rect x="620" y="420" width="60" height="10" fill="#8D6E63"/>
+  <rect x="625" y="430" width="10" height="20" fill="#6D4C41"/>
+  <rect x="665" y="430" width="10" height="20" fill="#6D4C41"/>
+  
+  <!-- Students walking -->
+  <circle cx="380" cy="450" r="12" fill="#42A5F5"/>
+  <line x1="380" y1="462" x2="380" y2="490" stroke="#42A5F5" stroke-width="4"/>
+  <line x1="380" y1="470" x2="365" y2="485" stroke="#42A5F5" stroke-width="4"/>
+  <line x1="380" y1="470" x2="395" y2="485" stroke="#42A5F5" stroke-width="4"/>
+  
+  <circle cx="430" cy="455" r="12" fill="#66BB6A"/>
+  <line x1="430" y1="467" x2="430" y2="495" stroke="#66BB6A" stroke-width="4"/>
+  <line x1="430" y1="475" x2="415" y2="490" stroke="#66BB6A" stroke-width="4"/>
+  <line x1="430" y1="475" x2="445" y2="490" stroke="#66BB6A" stroke-width="4"/>
+  
+  <!-- Sun -->
+  <circle cx="100" cy="100" r="40" fill="#FFD54F"/>
+</svg>
