@@ -1,6 +1,39 @@
 # Excellence University Website
 
-A modern, responsive university website featuring a clean, minimal design with interactive elements.
+A modern, responsive university website featuring a clean, minimal design with interactive elements and AI-powered accessibility chatbot.
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd University-page
+```
+
+### 2. Set up API key (for AI chatbot - optional)
+```bash
+# Copy the template
+cp api-key.example.js api-key.js
+
+# Edit api-key.js and add your Gemini API key
+# Get free key from: https://makersuite.google.com/app/apikey
+```
+
+**Note:** The chatbot works without an API key using rule-based responses. AI is optional.
+
+### 3. Open in browser
+```bash
+# Just open index.html in your browser, or use a local server:
+python3 -m http.server 8080
+# Then visit: http://localhost:8080
+```
+
+## 🔐 Security Notice
+
+- `api-key.js` contains your private API key
+- This file is in `.gitignore` and **won't be committed to Git**
+- Never commit API keys to version control
+- Use `api-key.example.js` as a template for team members
 
 ## Features
 
@@ -114,6 +147,26 @@ University page/
    - Update `script.js` to change interactive behavior
    - Replace images in the `assets/` folder with real photos
 
+## Deployment to GitHub Pages
+
+If you want to publish this static site to GitHub Pages, follow these steps:
+
+1. Create a repository on GitHub and push this project to the `main` branch.
+2. This repo includes a GitHub Actions workflow at `.github/workflows/deploy.yml` which
+   publishes the repository root to the `gh-pages` branch on each push to `main`.
+3. Important security note about the Gemini API key:
+   - Do NOT commit `api-key.js` to the repo — it is already listed in `.gitignore`.
+   - For production, avoid embedding the Gemini API key into the client. Instead host a
+     small server or serverless proxy that keeps the key in an environment variable and
+     forwards requests from the client. This keeps the key secret.
+   - If you still want the site to call Gemini directly (not recommended), you can make
+     GitHub Actions create an `api-key.js` at build time from a repository secret, but
+     that will expose the key in the published site. See `.github/workflows/deploy.yml` for
+     an example commented step — only use it if you accept the security risk.
+
+4. After pushing to `main`, GitHub Actions will run and deploy the site to the `gh-pages` branch.
+   Enable GitHub Pages in the repository settings and select the `gh-pages` branch as source if needed.
+
 ## Color Scheme
 
 - **Primary**: #1a5490 (Deep Blue)
@@ -142,6 +195,7 @@ University page/
 - Keyboard navigation support
 - High contrast text
 - Focus indicators on interactive elements
+ - Documentation: [WCAG detection & fixes](docs/WCAG_DETECTION.md) — explains how problems are detected and how CSS fixes are applied
 
 ## Performance Optimizations
 
