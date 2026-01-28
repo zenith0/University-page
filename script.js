@@ -464,6 +464,8 @@ class AccessibilityChatbot {
             if (this.checkBtn) {
                 this.checkBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6"></path><path d="M12 16v6"></path></svg> Start AI Mode';
             }
+            // Show API key prompt if not configured
+            this.checkApiKeyOnLoad();
         }
     }
     
@@ -2119,6 +2121,35 @@ class AccessibilityChatbot {
         // Remove the key prompt
         const keyPrompt = input.closest('div[style*="background:#fff3cd"]');
         if (keyPrompt) keyPrompt.remove();
+    }
+    
+    checkApiKeyOnLoad() {
+        // Show welcome message with API key prompt if not configured
+        if (!this.apiKey) {
+            setTimeout(() => {
+                this.addMessage(
+                    "👋 Welcome! I'll analyze this page for WCAG accessibility compliance and suggest improvements.\n\n" +
+                    "You can either type a quick request (e.g. \"increase contrast\", \"bigger text\") or click \"Next Recommendation\" to run the guided analysis.",
+                    'bot'
+                );
+                
+                // Show API key setup prompt
+                const keyPrompt = document.createElement('div');
+                keyPrompt.style.cssText = 'background:#fff3cd;padding:15px;border-radius:8px;margin:10px 0;border:1px solid #ffc107;';
+                keyPrompt.innerHTML = `
+                    <div style="margin-bottom:10px;color:#856404;font-weight:bold;">🔑 Enable AI Features (Optional)</div>
+                    <div style="margin-bottom:10px;color:#856404;font-size:14px;">Enter your Google Gemini API key for AI-powered responses:</div>
+                    <input type="password" id="apiKeyInput" placeholder="AIzaSy..." style="width:100%;padding:8px;border:1px solid #ccc;border-radius:4px;margin-bottom:8px;font-family:monospace;">
+                    <button onclick="chatbot.setApiKey()" style="background:#1a5490;color:white;border:none;padding:8px 16px;border-radius:4px;cursor:pointer;width:100%;margin-bottom:5px;">Save API Key</button>
+                    <div style="margin-top:8px;font-size:12px;color:#856404;">
+                        Get a free key: <a href="https://makersuite.google.com/app/apikey" target="_blank" style="color:#1a5490;">Google AI Studio</a><br>
+                        <em>Without a key, I'll use rule-based responses (still functional!)</em>
+                    </div>
+                `;
+                this.messages.appendChild(keyPrompt);
+                this.scrollToBottom();
+            }, 500);
+        }
     }
 }
 
