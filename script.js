@@ -438,7 +438,8 @@ class AccessibilityChatbot {
         // CONFIGURATION FROM ai-config.js
         // ==========================================
         // All AI settings, prompts, and rules are in ai-config.js
-        this.apiKey = AI_CONFIG.apiKey;
+        // Try to load API key from: 1) localStorage, 2) AI_CONFIG, 3) empty
+        this.apiKey = localStorage.getItem('geminiApiKey') || AI_CONFIG.apiKey;
         this.apiEndpoint = AI_CONFIG.endpoint;
         this.conversationHistory = [];
         this.appliedImprovements = []; // Track all applied improvements (never offer twice)
@@ -1685,10 +1686,23 @@ class AccessibilityChatbot {
         // Check if API key is set
         if (!this.apiKey) {
             this.typing.style.display = 'none';
-            this.addMessage(
-                "⚠️ API key not configured. Please add your Google Gemini API key in script.js. For now, I'll use rule-based responses.",
-                'bot'
-            );
+            
+            // Offer to set API key
+            const keyPrompt = document.createElement('div');
+            keyPrompt.style.cssText = 'background:#fff3cd;padding:15px;border-radius:8px;margin:10px 0;border:1px solid #ffc107;';
+            keyPrompt.innerHTML = `
+                <div style="margin-bottom:10px;color:#856404;font-weight:bold;">🔑 API Key Required</div>
+                <div style="margin-bottom:10px;color:#856404;font-size:14px;">Enter your Google Gemini API key to enable AI responses:</div>
+                <input type="password" id="apiKeyInput" placeholder="AIzaSy..." style="width:100%;padding:8px;border:1px solid #ccc;border-radius:4px;margin-bottom:8px;font-family:monospace;">
+                <button onclick="chatbot.setApiKey()" style="background:#1a5490;color:white;border:none;padding:8px 16px;border-radius:4px;cursor:pointer;width:100%;">Save API Key</button>
+                <div style="margin-top:8px;font-size:12px;color:#856404;">
+                    Get a free key: <a href="https://makersuite.google.com/app/apikey" target="_blank" style="color:#1a5490;">Google AI Studio</a>
+                </div>
+            `;
+            this.messages.appendChild(keyPrompt);
+            this.scrollToBottom();
+            
+            // Still provide rule-based response
             this.handleRuleBasedResponse(message);
             return;
         }
@@ -2080,11 +2094,38 @@ class AccessibilityChatbot {
     scrollToBottom() {
         this.messages.scrollTop = this.messages.scrollHeight;
     }
+    
+    setApiKey() {
+        const input = document.getElementById('apiKeyInput');
+        const key = input?.value.trim();
+        
+        if (!key) {
+            alert('Please enter an API key');
+            return;
+        }
+        
+        if (!key.startsWith('AIzaSy')) {
+            alert('Invalid API key format. Gemini API keys start with "AIzaSy"');
+            return;
+        }
+        
+        // Save to localStorage
+        localStorage.setItem('geminiApiKey', key);
+        this.apiKey = key;
+        
+        // Show success message
+        this.addMessage('✅ API key saved! You can now use AI-powered responses. Try asking for accessibility improvements.', 'bot');
+        
+        // Remove the key prompt
+        const keyPrompt = input.closest('div[style*="background:#fff3cd"]');
+        if (keyPrompt) keyPrompt.remove();
+    }
 }
 
 // Initialize chatbot when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    window.accessibilityChatbot = new AccessibilityChatbot();
+    window.chatbot = new AccessibilityChatbot();
+    window.accessibilityChatbot = window.chatbot; // Keep old reference for compatibility
     console.log('Accessibility Chatbot initialized');
     console.log('To enable AI responses, add your Gemini API key to the AccessibilityChatbot class');
 });
